@@ -14,7 +14,7 @@ export class Menu {
 export class TextMenuOutput implements MenuOutputI {
     output(products: ProductsI[]) {
         return products.map(product => {
-            return `${product.id} - ${product.name} - ${product.price}`
+            return `${product.name} - ${product.price} - ${product.id}`
         });
     }
 }

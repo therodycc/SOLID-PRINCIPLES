@@ -20,3 +20,27 @@ export const products = [
         price: 1000
     },
 ]
+
+
+export const vehicles = [
+    {
+        type: 'Avion',
+        color: 'white',
+        year: 2020
+    },
+    {
+        type: 'Motor',
+        color: 'white',
+        year: 2020
+    },
+    {
+        type: 'Gray',
+        color: 'white',
+        year: 2020
+    },
+    {
+        type: 'Avion',
+        color: 'white',
+        year: 2020
+    },
+]
