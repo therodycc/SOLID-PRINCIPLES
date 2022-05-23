@@ -1,7 +1,4 @@
-interface ShapeI {
-    area(): number
-}
-
+import { ShapeI } from './interfaces/shape.interface';
 export class Area {
     view(shape: ShapeI) {
         return shape.area();
@@ -17,7 +14,7 @@ export class Rectangle implements ShapeI {
         this.A = a;
         this.B = b;
     }
-    
+
     area(): number {
         return this.B * this.A;
     }

@@ -3,21 +3,24 @@ import { products } from "./db/db";
 import { Area, Circle, Rectangle } from "./area";
 class Server {
     main() {
+        this.getMenuView()
+        this.getAreaView()
+    }
+
+    getMenuView() {
         const menu = new Menu()
         const textOutput = menu.view(products, new TextMenuOutput())
         const jsonOutput = menu.view(products, new JsonMenuOutput())
-        console.log(textOutput)
-        console.log(jsonOutput)
-
-        const area = new Area();
-        const rectangle = new Rectangle(20, 40)
-        const circle = new Circle(30)
-
-        const areaRectangle = area.view(rectangle)
-        const areaCircle = area.view(circle)
-        console.log({ areaRectangle })
-        console.log({ areaCircle })
+        console.log({ textOutput, jsonOutput })
     }
+
+    getAreaView() {
+        const area = new Area();
+        const areaRectangle = area.view(new Rectangle(20, 40))
+        const areaCircle = area.view(new Circle(30))
+        console.log({ areaRectangle, areaCircle })
+    }
+
 }
 
 const server = new Server()
